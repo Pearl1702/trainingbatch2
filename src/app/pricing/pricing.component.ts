@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component ({
   selector: 'pricing-section',
-  template: `Pricing template`
+  templateUrl: `pricing.component.html`,
+  styleUrls:['pricing.component.css']
 })
 export class PricingSection { }

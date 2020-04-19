@@ -8,10 +8,11 @@ import { appRoutes } from './app.route';
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
 import { PricingSection } from './pricing/pricing.component';
+import {footerComponent} from './global/footer/footer.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, RouterModule.forRoot (appRoutes) ],
-  declarations: [ AppComponent,
+  declarations: [ AppComponent,footerComponent,
     LoginSection, PricingSection ],
   bootstrap:    [ AppComponent ]
 })
