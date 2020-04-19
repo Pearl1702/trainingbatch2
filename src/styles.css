@@ -1,1 +1,21 @@
-/* Add application styles & imports to this file! */
+/*login page css*/
+.login {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-30%, -50%);
+  width: 150px;
+  height: 350px;
+  padding: 40px 100px;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: Calibri;
+}
+h1{
+  text-align: center;
+}
+.button{
+  border: 1px solid #718092;
+  border-radius: 8px;
+  padding: 4px;
+  transform: translate(120%, -50%); 
+}
