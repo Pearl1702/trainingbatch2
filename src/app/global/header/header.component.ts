@@ -4,15 +4,12 @@ import { Component } from '@angular/core';
   selector: 'header-section',
   template: `
   <nav class="navbar">
-    <a class="navbar-item">
-      <img src="logo.jpg" placeholder="Logo">
+      <img src="https://www.torryharris.com/images/this/torry-harris-integration-home.svg" placeholder="Logo">
       <a href="#Home">Home</a>
       <a href="#About">About</a>
       <a href="#Contact Us">Contact Us</a>
-    </a>
-  </nav>
-  `,
-  styles:['.navbar {background-color: blueviolet; padding: 10px;} .navbar a {color: #d3e3e7;font-size: 20px;}']
+  </nav>`,
+  
 })
 
 export class HeaderComponent {  }

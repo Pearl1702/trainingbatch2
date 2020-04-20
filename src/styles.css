@@ -11,14 +11,14 @@ h1 {
   margin: 0;
   padding: 0;
 }
-input {
+.login-form input {
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 25px;
   padding: 2px 5px;
 }
-button {
+.login-form button {
   border: 0;
   color: #ffffff;
   background-color: rgb(8, 141, 165);
@@ -48,4 +48,23 @@ button {
 }
 .login-form button {
   margin-top: 2rem;
+}
+.navbar{
+ background-color: rgba(26, 25, 25 ,0.9);
+ height: 50px;
+}
+.navbar a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+  background-color: #FA6152;
+  /* color: black; */
+}
+.navbar img{
+  height: 45px;
 }
