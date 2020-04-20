@@ -1,21 +1,51 @@
-/*login page css*/
-.login {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translate(-30%, -50%);
-  width: 150px;
-  height: 350px;
-  padding: 40px 100px;
-  background: rgba(0, 0, 0, 0.5);
-  font-family: Calibri;
+/* Global CSS Properties */
+* {
+  box-sizing: border-box;
 }
-h1{
-  text-align: center;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.button{
-  border: 1px solid #718092;
-  border-radius: 8px;
-  padding: 4px;
-  transform: translate(120%, -50%); 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  line-height: 25px;
+  padding: 2px 5px;
+}
+button {
+  border: 0;
+  color: #ffffff;
+  background-color: rgb(8, 141, 165);
+  padding: 10px 20px;
+}
+.title {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Login Section CSS */
+.auth-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-section {
+  width: 50%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+.login-form input {
+  margin: 1rem 0;
+}
+.login-form button {
+  margin-top: 2rem;
 }
