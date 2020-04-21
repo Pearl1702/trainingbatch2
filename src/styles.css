@@ -18,12 +18,6 @@ h1 {
   line-height: 25px;
   padding: 2px 5px;
 }
-.login-form button {
-  border: 0;
-  color: #ffffff;
-  background-color: rgb(8, 141, 165);
-  padding: 10px 20px;
-}
 .title {
   font-size: 2rem;
   padding-bottom: 10px;
@@ -45,9 +39,6 @@ h1 {
 }
 .login-form input {
   margin: 1rem 0;
-}
-.login-form button {
-  margin-top: 2rem;
 }
 .navbar{
  background-color: rgba(26, 25, 25 ,0.9);

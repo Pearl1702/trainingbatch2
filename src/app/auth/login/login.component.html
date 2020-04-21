@@ -4,7 +4,7 @@
       <form class="login-form" [formGroup]="loginForm" (submit)="loginSubmit (this.loginForm.value)">
           <input type="text" formControlName="username" placeholder="Enter Username" required />
           <input type="password" formControlName="password" placeholder="Enter Password" required />
-          <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+          <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
       </form>
     </div>
 </section>
