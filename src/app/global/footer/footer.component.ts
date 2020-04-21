@@ -4,10 +4,8 @@ import { Component } from '@angular/core';
   selector: 'footer',
   template:`
   <div class="footer">
-    <p> &copy; Copyrights Torry Harris Bussiness Solution</p>
+    <mat-card>@Copyrights Torry Harris Business Solution </mat-card>
   </div>`,
-  styles:['.footer{	position: relative; bottom: 0; width: 100%;}.footer p { font-size: 8pt; padding 2px 20px;}']
+  styles:['.footer{	position: relative; bottom: 0; width: 100%; height: 10px;}.mat-card{background-color: rgb(255, 255, 255);text-align:left; font-size: 10pt;padding: 4px 10px}']
 })
-export class FooterComponent  { 
- 
-}
+export class FooterComponent  {  }
