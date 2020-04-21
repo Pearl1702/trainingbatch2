@@ -1,57 +1,46 @@
 <header-section></header-section>
-<div class="container" >
-  <div class="pricing">
-  <img style="-webkit-user-select: none;margin: auto;" src="https://www.torryharris.com/images/this/products/digitmarket/digit-market.png" alt="digit Market" class='center'>
-    </div>
-   <form>
-        
-   <fieldset>
-        <legend>Group 1</legend>
-   
-    <label for="check1">Checkbox 1 
-       <input type="checkbox" id="check1" name="checkboxes" checked>
-    </label><br>
-   
-    <label for="check2">Checkbox 2
-       <input type="checkbox" id="check2" name="checkboxes">
-    </label><br>
+<div class="top-img"> 
+  <img src="https://www.torryharris.com/images/this/products/digitmarket/digit-market.png" alt ="digitMarket">
+<h2 align="center">API Manager</h2>
+</div>
+<div class="pricing-form">
+  <div class="display">
+    <h3>Calculate Summary</h3>
+    <button mat-raised-button color="primary">Calculate Price</button>
+  </div>
     
-    <label for="check3">Checkbox 3
-      <input type="checkbox" id="check3" name="checkboxes">
-    </label>
 
-  </fieldset>
-  
- 
-  <fieldset>
-    <legend>Group 2</legend>
-    
-    <label for="radio1">Radio 1
-      <input type="radio" id="radio1" name="radios" checked>
-    </label><br>
-    
-    <label for="radio2">Radio 2
-      <input type="radio" id="radio2" name="radios">
-    </label><br>
-   
-    <label for="radio3">Radio 3 
-      <input type="radio" id="radio3" name="radios">
-    </label>
-  </fieldset>
+    <form class="display"> 
+      <h3>Choose your Options</h3>
+      <legend>Number of a API calls a days* </legend>
+      <select name="select-choice" id="select-choice">
+        <option value="Choice 1">- - select one - -</option>
+        <option value="Choice 2">few</option>
+        <option value="Choice 3">modrate</option>
+        <option value="Choice 4">Many</option>
+        <option value="Choice 5">Lot many</option>
+      </select><br>
+      <label>Average request/response payload size in KB</label>
+      <input type="text"><br>
+      <label>Analytics data retention period in month(minimum 1 month)</label>
+      <input type="text"><br>
+      <legend>Dedicated Performance testing environment required*</legend>
+       <input type="radio" id="radio1" name="radios">
+       <label for="radio1">Yes</label>
+      <input type="radio" id="radio1" name="radios">
+      <label for="radio2">No</label>
 
-  <fieldset>
-    <label for="select-choice">Number of Hits?</label>
-    <select name="select-choice" id="select-choice">
-      <option value="Choice 1">- - select one - -</option>
-      <option value="Choice 2">few</option>
-      <option value="Choice 3">modrate</option>
-      <option value="Choice 4">Many</option>
-      <option value="Choice 5">Lot many</option>
-    </select>
-  </fieldset>
+      <legend>Level of support* </legend>
+      <select name="select-choice" id="select-choice">
+        <option value="Choice 1">- - select one - -</option>
+        <option value="Choice 2">few</option>
+        <option value="Choice 3">modrate</option>
+        <option value="Choice 4">Many</option>
+        <option value="Choice 5">Lot many</option>
+      </select><br>
 
-        <button>pricing</button>
-  </form>
-  <h1>$Price</h1>
- </div>
- <footer></footer>
+    </form>
+
+</div>
+
+ <!-- <footer></footer> -->

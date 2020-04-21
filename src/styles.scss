@@ -19,15 +19,16 @@ body {
   padding: 0;
 }
 h1 {
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
-.login-form input {
+input[type=text],.login-form input {
   width: 100%;
   border: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 25px;
   padding: 2px 5px;
+  margin: 0 0 20px  0;
 }
 .title {
   font-size: 2rem;

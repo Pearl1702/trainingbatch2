@@ -1,48 +1,3 @@
-form {
-  position: relative;
-  width: 500px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  top:20%;
- font-size: 1.1em;
-  font-family: inherit;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-}
-
- form button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: #f14842;
-  color: rgb(255, 250, 250);
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-family: "McLaren", cursive;
-  font-weight: 600;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-}
-
-.pricing {
-  margin: auto -16px;
-  bottom: -18px;
-  padding: 16px 32px;
-  background-color: rgba(26, 25, 25 , 0.9);
-  height: 200px;
-  box-shadow: 0 5px 5px   rgb(158, 156, 156);
-  z-index: -1;
-}
-
-fieldset {
-  margin: 15px 0 1rem 0;
-  padding: 0;
-  border: none;
-}
 legend,
 label {
   display: inline-block;
@@ -50,7 +5,6 @@ label {
 }
 select {
   display: block;
-  margin: 10px;
   padding: .5rem;
   width: 100%;
   background-color: white;
@@ -59,21 +13,26 @@ select {
   outline: none;
       
 }
-.container {
-  position: 0 relative;
-   margin: auto -16px;
-  bottom: -18px;
-  background-color: rgb(231, 228, 228);
+.display{
+  float: right;
+  background: #fff;
+  color: rgb(73, 72, 72);
+  padding: 15px;
+  margin: 20px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-h1{
-  color: rgb(51, 49, 49);
-  font-family: "McLaren", cursive;
-  font-weight: 200;
+.pricing-form{
+  margin-right: 10%;
+  margin-top: 2%;
+}
+.top-img{
   text-align: center;
+  padding: 0;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+img{
+  margin-right: 0%;
+  // padding: 0;
+   transform: scaleX(-1);
 
+}
