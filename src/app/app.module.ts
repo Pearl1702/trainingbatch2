@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterial } from './angular.material';
 
 import { appRoutes } from './app.route';
 
@@ -13,7 +15,7 @@ import { HeaderComponent } from './global/header/header.component';
 
 @NgModule({
   imports: [
-    BrowserModule, FormsModule, ReactiveFormsModule,
+    BrowserModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, AngularMaterial,
     RouterModule.forRoot (appRoutes)
   ],
   declarations: [
