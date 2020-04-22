@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AngularMaterial } from './angular.material';
-
+import {AuthService} from './sharedServices/services/auth.service';
 import { appRoutes } from './app.route';
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
@@ -24,6 +24,8 @@ import { HeaderComponent } from './global/header/header.component';
     FooterComponent, HeaderComponent,
     LoginSection, PricingSection
   ],
+  providers: [AuthService],
+
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

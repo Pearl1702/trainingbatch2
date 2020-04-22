@@ -1,5 +1,5 @@
-export interface Post {
+export interface Login {
   id: number,
-  title: string,
-  body: string
+  username: string,
+  password: string
 }
