@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component ({
   selector: 'pricing-section',
   templateUrl: `pricing.component.html`,
   styleUrls:['pricing.component.scss']
 })
-export class PricingSection {
+export class PricingSection implements OnInit {
    pricingInfo = {
     "_id":"5e09ba0b197068a98b6a73b7",
     "productname":"dmapim",
@@ -253,5 +253,9 @@ export class PricingSection {
         "email":"product@thbs.com"
     },
     "prodImg":"https://deplomatic-ui.s3.amazonaws.com/assets/logo/dmapim.png"
+  }
+
+  ngOnInit () {
+    // Call the user service here
   }
 }
