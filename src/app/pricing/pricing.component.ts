@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../sharedServices/services/user.service';
 
 @Component ({
   selector: 'pricing-section',
@@ -254,8 +255,13 @@ export class PricingSection implements OnInit {
     },
     "prodImg":"https://deplomatic-ui.s3.amazonaws.com/assets/logo/dmapim.png"
   }
-
+  userInfo: any;
+  constructor ( private userService: UserService ) { }
+ 
   ngOnInit () {
-    // Call the user service here
+    this.userService.getUserData()
+    .subscribe((data: any) => {this.userInfo = data;
+    console.log (this.userInfo);
+    })
   }
 }
