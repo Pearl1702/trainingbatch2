@@ -19,15 +19,20 @@
         <option value="Choice 4">Many</option>
         <option value="Choice 5">Lot many</option>
       </select><br>
-      <label>Average request/response payload size in KB</label>
-      <input type="text"><br>
-      <label>Analytics data retention period in month(minimum 1 month)</label>
-      <input type="text"><br>
-      <legend>Dedicated Performance testing environment required*</legend>
-      <input type="radio" id="radio1" name="radios">
-      <label for="radio1">Yes</label>
-      <input type="radio" id="radio1" name="radios">
-      <label for="radio2">No</label>
+      <mat-form-field class="w-100">
+          <mat-label>Average request/response payload size in KB</mat-label>
+          <input matInput formControlName="payload-size" />
+        </mat-form-field>
+       <mat-form-field class="w-100">
+          <mat-label>Analytics data retention period in month(minimum 1 month)</mat-label>
+          <input matInput formControlName="data-retention" />
+        </mat-form-field>
+      
+        <legend>Dedicated Performance testing environment required*</legend>
+        <input type="radio" id="radio1" name="radios">
+        <label for="radio1">Yes</label>
+        <input type="radio" id="radio1" name="radios">
+        <label for="radio2">No</label>
 
       <legend>Level of support* </legend>
       <select name="select-choice" id="select-choice">
