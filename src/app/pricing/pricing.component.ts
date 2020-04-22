@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../sharedServices/services/user.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component ({
   selector: 'pricing-section',
@@ -255,13 +256,15 @@ export class PricingSection implements OnInit {
     },
     "prodImg":"https://deplomatic-ui.s3.amazonaws.com/assets/logo/dmapim.png"
   }
-  userInfo: any;
-  constructor ( private userService: UserService ) { }
- 
-  ngOnInit () {
-    this.userService.getUserData()
-    .subscribe((data: any) => {this.userInfo = data;
-    console.log (this.userInfo);
-    })
+  
+  Data: any;
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.getData();
+  }
+
+  getData() {
+    this.http.getData().subscribe(data => { this.Data = data });
   }
 }
