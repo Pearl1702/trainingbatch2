@@ -22,18 +22,13 @@ h1 {
   margin: auto;
   padding: 0;
 }
-input[type=text],.login-form input {
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  line-height: 25px;
-  padding: 2px 5px;
-  margin: 0 0 20px  0;
-}
 .title {
   font-size: 2rem;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.w-100 {
+  width: 100%;
 }
 
 /* Login Section CSS */
@@ -48,9 +43,6 @@ input[type=text],.login-form input {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
-}
-.login-form input {
-  margin: 1rem 0;
 }
 .navbar{
  background-color: rgba(26, 25, 25 ,0.9);
