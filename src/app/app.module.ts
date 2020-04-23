@@ -6,9 +6,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AngularMaterial } from './angular.material';
-import {AuthService} from './sharedServices/services/auth.service';
-import {UserService} from './sharedServices/services/user.service';
+
+import { AuthService } from './sharedServices/services/auth.service';
+import { UserService } from './sharedServices/services/user.service';
+
 import { appRoutes } from './app.route';
+
 import { AppComponent } from './app.component';
 import { LoginSection } from './auth/login/login.component';
 import { PricingSection } from './pricing/pricing.component';

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Login } from "./models/Login";
+import { LoginModel } from "./models/login.model";
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -12,13 +12,11 @@ const httpOptions = {
 export class AuthService {
   postsUrl: string = 'https://reqres.in/api/login';
 
-  constructor(private http: HttpClient) { }
-
-  getPosts() : Observable<Login[]> {
-    return this.http.get<Login[]>(this.postsUrl);
+  constructor (private http: HttpClient) {
+    //
   }
 
-  savePost(login: Login): Observable<Login> {
-    return this.http.post<Login>(this.postsUrl, login, httpOptions);
+  savePost (login: LoginModel): Observable<LoginModel> {
+    return this.http.post<LoginModel> (this.postsUrl, login, httpOptions);
   }
 }
