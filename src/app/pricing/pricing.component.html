@@ -5,54 +5,36 @@
   </div>
   <h2 align="center">{{ pricingInfo.productname }}</h2>
   <div class="pricing-form">
-    <div class="display"> 
-      <h3>Calculate Summary</h3>
-      <button mat-raised-button color="primary">Calculate Price</button>
-    </div>
-    <form class="display">
+    
+    <form class="display" [formGroup]="pricingForm">
       <h3>Choose your Options</h3>
-      <div *ngFor="let val of pricingInfo.pricingparameters">
-        <div *ngIf="val.userInput && val.options.length > 2">
+      <div class="pricing-form" *ngFor="let val of pricingInfo.pricingparameters">
+        <div class ="form-select-label" *ngIf="val.userInput && val.options.length > 2">
           <legend>{{ val.value }}</legend>
           <select name="select-choice" id="select-choice">
             <option *ngFor="let opt of val.options" value="{{ opt.cost }}">{{ opt.value }}</option>
           </select>
         </div>
-        <div *ngIf="val.userInput && val.options.length === 2">
+        <div class ="form-radio-btn" *ngIf="val.userInput && val.options.length === 2">
           <legend>{{ val.value }}</legend>
           <div *ngFor="let opt of val.options" >
             <input type="radio" id="radio1" name="radios">
             <label for="radio2">{{ opt.action }}</label>
           </div>
         </div>
-        <div *ngIf="val.userInput && val.options.length === 1">
+        <div class="form-input-text" *ngIf="val.userInput && val.options.length === 1">
+          <mat-form-field class="w-100">
+          <mat-label>{{val.value}}</mat-label>
           <input matInput placeholder="{{ val.value }}" />
+          </mat-form-field>
         </div>
-        <!-- <mat-form-field class="w-100">
-            <mat-label>Average request/response payload size in KB</mat-label>
-            <input matInput />
-          </mat-form-field>
-        <mat-form-field class="w-100">
-            <mat-label>Analytics data retention period in month(minimum 1 month)</mat-label>
-            <input matInput />
-          </mat-form-field>
-        
-          <legend>Dedicated Performance testing environment required*</legend>
-          <input type="radio" id="radio1" name="radios">
-          <label for="radio1">Yes</label>
-          <input type="radio" id="radio1" name="radios">
-          <label for="radio2">No</label>
-
-        <legend>Level of support* </legend>
-        <select name="select-choice" id="select-choice">
-          <option value="Choice 1">- - select one - -</option>
-          <option value="Choice 2">few</option>
-          <option value="Choice 3">modrate</option>
-          <option value="Choice 4">Many</option>
-          <option value="Choice 5">Lot many</option>
-        </select> -->
+       
       </div>
     </form>
+    <div class="display"> 
+      <h3>Calculate Summary</h3>
+      <button mat-raised-button color="primary">Calculate Price</button>
+    </div>
   </div>
 </section>
 <footer-section></footer-section>
