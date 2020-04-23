@@ -15,15 +15,26 @@ select {
 }
 .display{
   padding: 15px;
-  margin: auto 50px 50px 50px;
+  margin: auto 50px ;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
 .top-img {
   text-align: center;
   padding: 20px;
+  
 }
 .pricing-form{
   display: flex;
+  justify-content: center;
   padding: 5px;
+}
+.form-input-text{
+width: 100%;
+}
+.form-margine{
+margin-bottom: 50px;
+}
+.form-margines{
+  margin-top: 0px;
 }
