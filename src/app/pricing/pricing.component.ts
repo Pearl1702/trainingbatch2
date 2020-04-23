@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../sharedServices/services/user.service';
 import { HttpClient } from '@angular/common/http';
+
+import { UserService } from '../sharedServices/services/user.service';
 
 @Component ({
   selector: 'pricing-section',
@@ -10,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class PricingSection implements OnInit {
    pricingInfo = {
     "_id":"5e09ba0b197068a98b6a73b7",
-    "productname":"dmapim",
+    "productname":"Digit Market API Manager",
     "productdescription":"dmapim",
     "pricingparameters":[
         {
@@ -39,7 +40,7 @@ export class PricingSection implements OnInit {
               },
               {
                 "range":"mid",
-                "value":"4  to 8 million",
+                "value":"4 to 8 million",
                 "cost":920
               },
               {
@@ -150,15 +151,15 @@ export class PricingSection implements OnInit {
                 "group":"addon"
               },
               {
-                "value":"none",
+                "value": "none",
                 "range":"mid",
                 "action":"No",
                 "group":"none"
               }
           ],
-          "tip":"Dedicated Performance testing environment required tip",
-          "userInput":true,
-          "mandatory":"required"
+          "tip": "Dedicated Performance testing environment required tip",
+          "userInput": true,
+          "mandatory": "required"
         },
         {
           "value":"Level of support",
@@ -257,14 +258,12 @@ export class PricingSection implements OnInit {
     "prodImg":"https://deplomatic-ui.s3.amazonaws.com/assets/logo/dmapim.png"
   }
   
-  Data: any;
-  constructor(private http: HttpClient) {}
-
-  ngOnInit() {
-    this.getData();
+  userData: any;
+  constructor (private http: HttpClient, private userService: UserService) {
+    //
   }
 
-  getData() {
-    this.http.getData().subscribe(data => { this.Data = data });
+  ngOnInit() {
+    this.userService.getUserData ().subscribe ((data: any) => console.log (data));
   }
 }
