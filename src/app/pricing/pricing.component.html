@@ -28,7 +28,20 @@
           <input matInput placeholder="{{ val.value }}" />
           </mat-form-field>
         </div>
-       
+      </div>
+      <div class="addOns" *ngFor="let val of pricingInfo.addOns">
+        <div class ="form-select-label" *ngIf="val.options.length > 1">
+        <legend>{{ val.value }}</legend>
+          <select name="select-choice" id="select-choice">
+            <option *ngFor="let opt of val.options" value="{{ opt.cost }}">{{ opt.value }}</option>
+          </select>
+          </div>
+          <div class="form-input-text" *ngIf="val.userInput &&    val.options.length === 1">
+            <mat-form-field class="w-100">
+            <mat-label>{{val.value}}</mat-label>
+            <input matInput placeholder="{{ val.value }}" />
+            </mat-form-field>
+          </div>
       </div>
     </form>
     <div class="display , form-margines"> 
