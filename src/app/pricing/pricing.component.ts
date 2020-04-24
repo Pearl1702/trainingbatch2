@@ -9,7 +9,8 @@ import { UserService } from '../sharedServices/services/user.service';
   styleUrls:['pricing.component.scss']
 })
 export class PricingSection implements OnInit {
-   pricingInfo = {
+  addonVisibility: boolean;
+  pricingInfo = {
     "_id":"5e09ba0b197068a98b6a73b7",
     "productname":"Digit Market API Manager",
     "productdescription":"dmapim",
@@ -264,6 +265,11 @@ export class PricingSection implements OnInit {
   }
 
   ngOnInit() {
+    this.addonVisibility = false;
     this.userService.getUserData ().subscribe ((data: any) => console.log (data));
+  }
+
+  modifyOptions (event: boolean) {
+    this.addonVisibility = event;
   }
 }

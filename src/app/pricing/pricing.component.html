@@ -1,25 +1,26 @@
 <header-section></header-section>
-<section>
+<section class="footer-fit">
   <div class="top-img"> 
     <img src="{{ pricingInfo.prodImg }}" alt ="digitMarket" height="80px">
   </div>
   <h2 align="center">{{ pricingInfo.productname }}</h2>
   <div class="pricing-form">
-    
-    <form class="display , form-margine" [formGroup]="pricingForm">
+    <form>
       <h3>Choose your Options</h3>
-      <div class="pricing-form" *ngFor="let val of pricingInfo.pricingparameters">
-        <div class ="form-select-label" *ngIf="val.userInput && val.options.length > 2">
+      <div *ngFor="let val of pricingInfo.pricingparameters">
+        <div class="form-select-label py-2" *ngIf="val.userInput && val.options.length > 2">
           <legend>{{ val.value }}</legend>
           <select name="select-choice" id="select-choice">
             <option *ngFor="let opt of val.options" value="{{ opt.cost }}">{{ opt.value }}</option>
           </select>
         </div>
-        <div class ="form-radio-btn" *ngIf="val.userInput && val.options.length === 2">
+        <div #radioOption class="form-radio-btn py-2" *ngIf="val.userInput && val.options.length === 2">
           <legend>{{ val.value }}</legend>
-          <div *ngFor="let opt of val.options" >
-            <input type="radio" id="radio1" name="radios">
-            <label for="radio2">{{ opt.action }}</label>
+          <div>
+            <input type="radio" id="radio1" name="Yes" (click)="modifyOptions (true)">
+            <label for="radio2">Yes</label>
+            <input type="radio" id="radio1" name="No" (click)="modifyOptions (false)">
+            <label for="radio2">No</label>
           </div>
         </div>
         <div class="form-input-text" *ngIf="val.userInput && val.options.length === 1">
@@ -29,22 +30,24 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="addOns" *ngFor="let val of pricingInfo.addOns">
-        <div class ="form-select-label" *ngIf="val.options.length > 1">
-        <legend>{{ val.value }}</legend>
-          <select name="select-choice" id="select-choice">
-            <option *ngFor="let opt of val.options" value="{{ opt.cost }}">{{ opt.value }}</option>
-          </select>
-          </div>
-          <div class="form-input-text" *ngIf="val.userInput &&    val.options.length === 1">
-            <mat-form-field class="w-100">
-            <mat-label>{{val.value}}</mat-label>
-            <input matInput placeholder="{{ val.value }}" />
-            </mat-form-field>
-          </div>
-      </div>
+      <ng-template *ngIf="addonVisibility">
+        <div class="addOns" *ngFor="let val of pricingInfo.addOns">
+          <div class ="form-select-label py-2" *ngIf="val.options.length > 1">
+          <legend>{{ val.value }}</legend>
+            <select name="select-choice" id="select-choice">
+              <option *ngFor="let opt of val.options" value="{{ opt.cost }}">{{ opt.value }}</option>
+            </select>
+            </div>
+            <div class="form-input-text" *ngIf="val.userInput && val.options.length === 1">
+              <mat-form-field class="w-100">
+              <mat-label>{{val.value}}</mat-label>
+              <input matInput placeholder="{{ val.value }}" />
+              </mat-form-field>
+            </div>
+        </div>
+      </ng-template>
     </form>
-    <div class="display , form-margines"> 
+    <div>
       <h3>Calculate Summary</h3>
       <button mat-raised-button color="primary">Calculate Price</button>
     </div>
