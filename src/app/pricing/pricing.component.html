@@ -3,7 +3,6 @@
   <div class="top-img"> 
     <img src="{{ pricingInfo.prodImg }}" alt ="digitMarket" height="80px">
   </div>
-  <h2 align="center">{{ pricingInfo.productname }}</h2>
   <div class="pricing-form">
     <form>
       <h3>Choose your Options</h3>
@@ -17,9 +16,9 @@
         <div #radioOption class="form-radio-btn py-2" *ngIf="val.userInput && val.options.length === 2">
           <legend>{{ val.value }}</legend>
           <div>
-            <input type="radio" id="radio1" name="Yes" (click)="modifyOptions (true)">
+            <input type="radio" id="radio1" name="addon" (click)="modifyOptions (true)">
             <label for="radio2">Yes</label>
-            <input type="radio" id="radio1" name="No" (click)="modifyOptions (false)">
+            <input type="radio" id="radio1" name="addon" (click)="modifyOptions (false)">
             <label for="radio2">No</label>
           </div>
         </div>
@@ -30,7 +29,8 @@
           </mat-form-field>
         </div>
       </div>
-      <ng-template *ngIf="addonVisibility">
+      <div *ngIf="addonVisibility">
+        <h3>Addon Options</h3>
         <div class="addOns" *ngFor="let val of pricingInfo.addOns">
           <div class ="form-select-label py-2" *ngIf="val.options.length > 1">
           <legend>{{ val.value }}</legend>
@@ -45,11 +45,13 @@
               </mat-form-field>
             </div>
         </div>
-      </ng-template>
+      </div>
     </form>
-    <div>
-      <h3>Calculate Summary</h3>
-      <button mat-raised-button color="primary">Calculate Price</button>
+    <div class="calc-area">
+      <div>
+        <h3>Calculate Summary</h3>
+        <button mat-raised-button color="primary">Calculate Price</button>
+      </div>
     </div>
   </div>
 </section>

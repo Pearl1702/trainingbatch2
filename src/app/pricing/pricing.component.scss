@@ -1,11 +1,15 @@
 .pricing-form{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-column-gap: 50px;
   padding: 5px;
 }
-.pricing-form form, .pricing-form>div {
-  height: auto;
+.pricing-form form {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 5px;
+}
+.calc-area>div {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 5px;
